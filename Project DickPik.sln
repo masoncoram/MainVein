@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project DickPik.CSharp", "Project DickPik.CSharp.csproj", "{1399505F-F038-83AF-117F-A24062639639}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project DickPik", "Assembly-CSharp.csproj", "{3D4A83EA-E6A7-E3E0-475F-B23B43E8B967}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1399505F-F038-83AF-117F-A24062639639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1399505F-F038-83AF-117F-A24062639639}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1399505F-F038-83AF-117F-A24062639639}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1399505F-F038-83AF-117F-A24062639639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D4A83EA-E6A7-E3E0-475F-B23B43E8B967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4A83EA-E6A7-E3E0-475F-B23B43E8B967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4A83EA-E6A7-E3E0-475F-B23B43E8B967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4A83EA-E6A7-E3E0-475F-B23B43E8B967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
