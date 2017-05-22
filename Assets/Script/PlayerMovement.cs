@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour {
 
     [HideInInspector]
     public bool facingRight = true;
+    [HideInInspector]
+    public bool jump = false;
 
     public float moveForce = 365f;
     public float maxSpeed = 1f;
@@ -22,15 +24,32 @@ public class PlayerMovement : MonoBehaviour {
     }
 	
 	// Update is called once per frame
+
+    void Update()
+    {
+        int layerMask = Physics2D.AllLayers;
+        if (collider.IsTouchingLayers(layerMask))
+        {
+            onGround = true;
+        }
+        else
+        {
+            onGround = false;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space) && onGround)
+
+        {
+            jump = true;
+        }
+    }
 	void FixedUpdate ()
     {
 
-        if (collider.IsTouchingLayers(LayerMask.NameToLayer("Background")))
-            {
-            onGround = true;
-            }
 
         float h = Input.GetAxis("Horizontal");
+
+
 
         if (h * rb2d.velocity.x < maxSpeed)
         {
@@ -47,6 +66,12 @@ public class PlayerMovement : MonoBehaviour {
         if (h < 0 && facingRight)
         {
             Flip();
+        }
+
+        if(jump)
+        {
+            rb2d.AddForce(new Vector2(0f, jumpForce));
+            jump = false;
         }
 
     }
